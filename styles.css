@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s;
+  padding: 20px;
+}
+
+
+body.dark {
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  color: #f5f5f5;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .container {
+  background: #2e2e2e;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 15px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.weather {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-info .details p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+#toggleUnitBtn {
+  background: #28a745;
+}
+
+#toggleUnitBtn:hover {
+  background: #218838;
+}
+
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-cards {
+  display: flex;
+  gap: 10px;
+  /* Removed overflow-x: auto; */
+  padding-bottom: 10px;
+}
+
+.forecast-card {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 100px;
+  flex: 0 0 auto;
+}
+
+.forecast-card img {
+  width: 50px;
+  height: 50px;
+}
+
+body.dark .forecast-card {
+  background: #444;
+  color: #fff;
+}
